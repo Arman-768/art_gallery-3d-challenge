@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my gallery</title>
+    <title>My Gallery</title>
     <style>
-        *{
-            box-sizing: border-box;
+        body {
+            margin: 0;
+            background: #C7B7A3;
         }
-         body{
-               margin: 0;
-               background: #C7B7A3;
-         }
 
-         nav{
-                background:#6D2932;
-                width: 100%;
-                overflow: auto;
-         }
+        nav {
+            background: #6D2932;
+            width: 100%;
+            overflow: auto;
+        }
 
-         ul{
+        ul {
             margin: 0;
             padding: 0;
             list-style: none;
-         }
+        }
 
-         li{
+        li {
             float: left;
-         }
-          nav a{
-                 width: 120px;
-                 display: block;
-                 text-decoration: none;
-                 text-align: center;
-                 font-size: 17px;
-                 color: white;
-                 padding: 20px 10px;
-                 font-family: cursive;
-                 font-weight: bold;
-                 
+        }
 
-          }
-        
-          nav a:hover{
-                         background:#E8D8C4 ;
-                         color: black;
+        nav a {
+            width: 120px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            color: white;
+            padding: 20px 10px;
+            font-family: cursive;
+            font-weight: bold;
+        }
 
+        nav a:hover {
+            background: #E8D8C4;
+            color: black;
+        }
 
-          }
+        .container-1,
+        .container-2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
 
-          .container{
-                      max-width: 1200px;
-                      margin: auto;
-                      background: green;
-                      overflow: auto;
-          }
+        .gallery {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
 
-          .gallery{
-                    margin: 5px;
-                    border: solid black;
-                    float: left;
-                    width: 390px;
-          }
-          .gallery img{
+        .gallery img {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
                 width: 100%;
-                height: auto;
-          }
+            }
+        }
 
-          .desc{
-                padding: 15px;
+        footer{
+                padding: 10px;
+                font-size: 17px;
+                font-weight: bold;
                 text-align: center;
-          }
-
-
+                background: #6D2932;
+                color: #E8D8C4;
+                font-family: cursive;
+                letter-spacing: 1px;
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -83,43 +94,38 @@
             <li><a href="#">Download</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Home</a></li>
-            
         </ul>
     </nav>
-    <div class="container"></div>
-         <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1705714135183-dbe57919b735?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2OHx8fGVufDB8fHx8fA%3D%3D" alt="404">
-            <div class="desc">Japan</div>
-         </div>
-
-         <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1705923401054-b06daf310fc3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D" alt="404">
-            <div class="desc">taiwan</div>
-         </div>
-
-         <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1682687980115-a37b56ea7271?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D" alt="404">
-            <div class="desc">cuba</div>
-         </div>
-
-         <div class="gallery">
+    <div class="container-1">
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1705714135183-dbe57919b735?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2OHx8fGVufDB8fHx8fA%3D%3D"
+                alt="404">
+        </div>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1504415724575-56cef5e3da72?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="404">
+        </div>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1705714135183-dbe57919b735?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2OHx8fGVufDB8fHx8fA%3D%3D"
+                alt="404">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-2">
+        <div class="gallery">
             <img src="https://plus.unsplash.com/premium_photo-1703689533862-166b2986cf8a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHx8fA%3D%3D" alt="404">
-            <div class="desc">Rose vase</div>
-         </div>
-
-         <div class="gallery">
+        </div>
+        <div class="gallery">
             <img src="https://plus.unsplash.com/premium_photo-1704546741925-63f7c58d8ae7?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D" alt="404">
-            <div class="desc">pebbles</div>
-         </div>
-
-         <div class="gallery">
+        </div>
+        <div class="gallery">
             <img src="https://images.unsplash.com/photo-1705607014209-0314bf7daa5a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8fA%3D%3D" alt="404">
-            <div class="desc">Fish</div>
-         </div>
+        </div>
+    </div>
+
+    <footer>
+      All right Reserved to Armaan
+    </footer>
 </body>
-</body>
-</body>
-</body>
-</body>
-</body>
+
 </html>
